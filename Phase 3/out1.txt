@@ -1,0 +1,298 @@
+
+*****FCFS Scheduling****
+ t= 0  
+ CPU: Loading process 0 (CPU burst = 10)
+ Ready Queue: - 1
+
+ t= 1  
+ CPU: Running process 0 (remaining CPU burst = 9)
+ Ready Queue: - 1
+
+ t= 2  
+ CPU: Running process 0 (remaining CPU burst = 8)
+ Ready Queue: - 1- 2
+
+ t= 3  
+ CPU: Running process 0 (remaining CPU burst = 7)
+ Ready Queue: - 1- 2
+
+ t= 4  
+ CPU: Running process 0 (remaining CPU burst = 6)
+ Ready Queue: - 1- 2- 3
+
+ t= 5  
+ CPU: Running process 0 (remaining CPU burst = 5)
+ Ready Queue: - 1- 2- 3
+
+ t= 6  
+ CPU: Running process 0 (remaining CPU burst = 4)
+ Ready Queue: - 1- 2- 3- 4
+
+ t= 7  
+ CPU: Running process 0 (remaining CPU burst = 3)
+ Ready Queue: - 1- 2- 3- 4
+
+ t= 8  
+ CPU: Running process 0 (remaining CPU burst = 2)
+ Ready Queue: - 1- 2- 3- 4
+
+ t= 9  
+ CPU: Running process 0 (remaining CPU burst = 1)
+ Ready Queue: - 1- 2- 3- 4
+
+ t= 10  
+ CPU: Finishing process 0  Loading process 1 (CPU burst = 3)
+ Ready Queue: - 1- 2- 3- 4
+
+ t= 11  
+ CPU: Running process 1 (remaining CPU burst = 2)
+ Ready Queue: - 2- 3- 4
+
+ t= 12  
+ CPU: Running process 1 (remaining CPU burst = 1)
+ Ready Queue: - 2- 3- 4
+
+ t= 13  
+ CPU: Finishing process 1  Loading process 2 (CPU burst = 7)
+ Ready Queue: - 2- 3- 4
+
+ t= 14  
+ CPU: Running process 2 (remaining CPU burst = 6)
+ Ready Queue: - 3- 4
+
+ t= 15  
+ CPU: Running process 2 (remaining CPU burst = 5)
+ Ready Queue: - 3- 4
+
+ t= 16  
+ CPU: Running process 2 (remaining CPU burst = 4)
+ Ready Queue: - 3- 4
+
+ t= 17  
+ CPU: Running process 2 (remaining CPU burst = 3)
+ Ready Queue: - 3- 4
+
+ t= 18  
+ CPU: Running process 2 (remaining CPU burst = 2)
+ Ready Queue: - 3- 4
+
+ t= 19  
+ CPU: Running process 2 (remaining CPU burst = 1)
+ Ready Queue: - 3- 4
+
+ t= 20  
+ CPU: Finishing process 2  Loading process 3 (CPU burst = 1)
+ Ready Queue: - 3- 4
+
+ t= 21  
+ CPU: Finishing process 3  Loading process 4 (CPU burst = 3)
+ Ready Queue: - 4
+
+ t= 22  
+ CPU: Running process 4 (remaining CPU burst = 2)
+ Ready Queue: 
+
+ t= 23  
+ CPU: Running process 4 (remaining CPU burst = 1)
+ Ready Queue: 
+
+ t= 24  
+ CPU: Finishing process 4 
+ Ready Queue: 
+
+******************************************************************
+FCFS Summary (WT = wait time, TT = turnaround time):
+	 PID 	 WT 	 TT
+	 0 	 0 	 10
+	 1 	 10 	 13
+	 2 	 11 	 18
+	 3 	 16 	 17
+	 4 	 15 	 18
+	 AVG 	 10.40 	 15.20
+
+
+Process sequence: -0-1-2-3-4-4
+ Context Switches: 6
+*****SJF Scheduling****
+ t= 0  
+ CPU: Loading process 1 (CPU burst = 3)
+ Ready Queue: - 1
+
+ t= 1  
+ CPU: Running process 1 (remaining CPU burst = -1)
+ Ready Queue: 
+
+ t= 2  
+ CPU: Running process 1 (remaining CPU burst = -2)
+ Ready Queue: - 2
+
+ t= 3  
+ CPU: Finishing process 1  Loading process 2 (CPU burst = 7)
+ Ready Queue: - 2
+
+ t= 4  
+ CPU: Running process 2 (remaining CPU burst = -1)
+ Ready Queue: - 3
+
+ t= 5  
+ CPU: Running process 2 (remaining CPU burst = -2)
+ Ready Queue: - 3
+
+ t= 6  
+ CPU: Running process 2 (remaining CPU burst = -3)
+ Ready Queue: - 3- 4
+
+ t= 7  
+ CPU: Running process 2 (remaining CPU burst = -4)
+ Ready Queue: - 3- 4
+
+ t= 8  
+ CPU: Running process 2 (remaining CPU burst = -5)
+ Ready Queue: - 3- 4
+
+ t= 9  
+ CPU: Running process 2 (remaining CPU burst = -6)
+ Ready Queue: - 3- 4
+
+ t= 10  
+ CPU: Finishing process 2  Loading process 3 (CPU burst = 1)
+ Ready Queue: - 3- 4
+
+ t= 11  
+ CPU: Finishing process 3  Loading process 4 (CPU burst = 3)
+ Ready Queue: - 4
+
+ t= 12  
+ CPU: Running process 4 (remaining CPU burst = -1)
+ Ready Queue: 
+
+ t= 13  
+ CPU: Running process 4 (remaining CPU burst = -2)
+ Ready Queue: 
+
+ t= 14  
+ CPU: Finishing process 4  Loading process 0 (CPU burst = 10)
+ Ready Queue: 
+
+ t= 15  
+ CPU: Running process 0 (remaining CPU burst = -1)
+ Ready Queue: 
+
+ t= 16  
+ CPU: Running process 0 (remaining CPU burst = -2)
+ Ready Queue: 
+
+ t= 17  
+ CPU: Running process 0 (remaining CPU burst = -3)
+ Ready Queue: 
+
+ t= 18  
+ CPU: Running process 0 (remaining CPU burst = -4)
+ Ready Queue: 
+
+ t= 19  
+ CPU: Running process 0 (remaining CPU burst = -5)
+ Ready Queue: 
+
+ t= 20  
+ CPU: Running process 0 (remaining CPU burst = -6)
+ Ready Queue: 
+
+ t= 21  
+ CPU: Running process 0 (remaining CPU burst = -7)
+ Ready Queue: 
+
+ t= 22  
+ CPU: Running process 0 (remaining CPU burst = -8)
+ Ready Queue: 
+
+ t= 23  
+ CPU: Running process 0 (remaining CPU burst = -9)
+ Ready Queue: 
+
+ t= 24  
+ CPU: Finishing process 0 
+ Ready Queue: 
+
+******************************************************************
+SJF Summary (WT = wait time, TT = turnaround time):
+	 PID 	 WT 	 TT
+	 0 	 14 	 24
+	 1 	 0 	 3
+	 2 	 1 	 8
+	 3 	 6 	 7
+	 4 	 5 	 8
+	 AVG 	 5.20 	 10.00
+
+
+Process sequence: -1-2-3-4-0
+ Context Switches: 5
+*****Priority Scheduling****
+******************************************************************
+Priority Summary (WT = wait time, TT = turnaround time):
+	 PID 	 WT 	 TT
+	 0 	 0 	 10
+	 1 	 18 	 21
+	 2 	 8 	 15
+	 3 	 13 	 14
+	 4 	 15 	 18
+	 AVG 	 10.80 	 15.60
+
+
+Process sequence: -0-2-3-1-4-4
+ Context Switches: 6
+*****STCF Scheduling****
+******************************************************************
+STCF Summary (WT = wait time, TT = turnaround time):
+	 PID 	 WT 	 TT
+	 0 	 14 	 24
+	 1 	 0 	 3
+	 2 	 5 	 12
+	 3 	 0 	 1
+	 4 	 0 	 3
+	 AVG 	 3.80 	 8.60
+
+
+Process sequence: -2-3-4-2-3-4-2-3
+ Context Switches: 8
+*****RR Scheduling****
+******************************************************************
+RR Summary (WT = wait time, TT = turnaround time):
+	 PID 	 WT 	 TT
+	 0 	 0 	 10
+	 1 	 2 	 24
+	 2 	 2 	 22
+	 3 	 2 	 20
+	 4 	 1 	 18
+	 AVG 	 1.40 	 18.80
+
+
+Process sequence: -0-1-2-3-4-0-1-2-4-0-2-0-2-0
+ Context Switches: 14
+**********OVERALL SUMMARY*************
+
+Wait Time Comparision
+1 STCF        3.80
+2 SJF         5.20
+3 FCFS        10.40
+4 RoundRobin  1.40
+5 Priority    10.80
+
+TURNAROUND Time Comparision
+1 STCF        8.60
+2 SJF         10.00
+3 FCFS        15.20
+4 RoundRobin  18.80
+5 Priority    15.60
+
+Context Switch Comparision
+1 STCF        8
+2 SJF         5
+3 FCFS        6
+4 RoundRobin  14
+5 Priority    6ion
+1 STCF        8
+2 SJF         5
+3 FCFS        6
+4 RoundRobin  14
+5 Priority    6
